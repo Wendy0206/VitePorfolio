@@ -7,15 +7,23 @@ window.onload = function () {
   const image_hover = document.querySelectorAll(".project_img_div");
   const show_info = document.querySelectorAll(".project_info_div");
 
+  const resume = document.querySelector(".resume_button");
+  resume.addEventListener('click',()=>{
+    console.log("this function was called : ");
+
+ 
+
+  })
+
   for (let i = 0; i < image_hover.length; i++) {
-    console.log("THis piece of code just run");
+ 
     image_hover[i].addEventListener("mouseover", () => {
       show_info[i].classList.toggle("show_project_info");
     });
   }
 
   for (let i = 0; i < image_hover.length; i++) {
-    console.log("THis piece of code just run");
+  
     show_info[i].addEventListener("mouseleave", () => {
       show_info[i].classList.toggle("show_project_info");
     });
@@ -60,7 +68,7 @@ var current_mode=1;
   var desc_p = document.querySelector(".title");
 
   dark_mode.addEventListener("click", () => {
-    console.log("this function was called : ");
+
 
     if (current_mode == 1) {
       home_left.style.backgroundColor = " #1a261d";

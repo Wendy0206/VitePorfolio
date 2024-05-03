@@ -87,7 +87,7 @@ label[for="ham-menu"] {
 }
 
 .ham-menu > ul > li, .header_style {
-  font-size: 6rem;
+  font-size: 7rem;
   white-space: nowrap;
   letter-spacing: 0.0em;
   color: rgb(97, 97, 97);
@@ -373,6 +373,8 @@ li{
 }
 
 .diamond-narrow {
+
+  margin-top: 25x;
       width: 0;
       height: 0;
       border: 20px solid transparent;
@@ -858,12 +860,12 @@ input[type=checkbox]:checked + label {
   outline: var(--b) solid #0000;
   outline-offset: .6em;
   font-size: 16px;
-
   border: 0;
-
+  font-family: "OpenSansCondensed-Light";
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  text-decoration: none;
 }
 
 .resume_button:hover,
@@ -871,6 +873,8 @@ input[type=checkbox]:checked + label {
   --_p: 0px;
   outline-color: var(--color);
   outline-offset: .05em;
+  text-decoration: none;
+  color: black;
 }
 
 .resume_button:active {
