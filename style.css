@@ -1,5 +1,6 @@
 :root {
   --home-bg-color: #f2f3ee;
+  --color: #373B44;
   --menu-bg-color: #cbcbc2;
   --silde-btn-border: #808080;
   --slide-btn-bg: #ddf2db;
@@ -471,6 +472,7 @@ visibility: hidden;
 }
 
 
+
 .project_img_div{
   width: 50rem;
   height: 500px;
@@ -845,7 +847,7 @@ input[type=checkbox]:checked + label {
 .resume_button {
   --b: 3px;   /* border thickness */
   --s: .45em; /* size of the corner */
-  --color: #373B44;
+ 
   padding: calc(.5em + var(--s)) calc(.9em + var(--s));
   color: var(--color);
   --_p: var(--s);

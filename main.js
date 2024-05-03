@@ -76,7 +76,7 @@ var current_mode=1;
       input_bg[1].style.backgroundColor = "rgba(33, 96, 47, 0.51)";
       input_bg[2].style.backgroundColor = "rgba(33, 96, 47, 0.51)";
       input_bg[3].style.backgroundColor = "rgba(33, 96, 47, 0.51)";
-
+      document.documentElement.style.setProperty("--color", "white");
      current_mode=0;
     } else {
       home_left.style.backgroundColor = " rgba(33, 96, 47, 0.51)";
@@ -88,7 +88,8 @@ var current_mode=1;
       input_bg[1].style.backgroundColor = "#2d2d2d";
       input_bg[2].style.backgroundColor = "#2d2d2d";
       input_bg[3].style.backgroundColor = "#2d2d2d";
-
+      document.documentElement.style.setProperty("--color", "#373B44");
+      
       desc_p.style.color = " #1a261d";
 
         current_mode=1;
