@@ -21,8 +21,6 @@
 }
 
 
-
-
 *,
 *::before,
 *::after {
@@ -39,9 +37,8 @@ html {
   color: var(--text-color);
   font-weight: normal;
   font-family: sans-serif;
-
-
 }
+
 
 #ham-menu {
   display: none;
@@ -50,8 +47,8 @@ html {
 label[for="ham-menu"] {
   display: block;
   position: fixed;
-  top: 24px;
-  left: 20px;
+  top: 20;
+  left: 30px;
   z-index: 999;
   width: 60px;
   height: 60px;
@@ -91,9 +88,16 @@ label[for="ham-menu"] {
   color: rgb(97, 97, 97);
 }
 
-.ham-menu>ul>li,
-.header_style {
+.ham-menu>ul>li {
   font-size: 7rem;
+  white-space: nowrap;
+  letter-spacing: 0.0em;
+  color: rgb(97, 97, 97);
+}
+
+
+.header_style {
+  font-size: 5em;
   white-space: nowrap;
   letter-spacing: 0.0em;
   color: rgb(97, 97, 97);
@@ -277,11 +281,6 @@ a {
 
 }
 
-.about {
-  flex-direction: column;
-  justify-content: center;
-}
-
 
 
 .left_side,
@@ -297,8 +296,9 @@ a {
 .about_left_div {
   width: 55%;
   padding-top: 6%;
-  padding-left: 7%;
+  padding-left: 5%;
 }
+
 
 .w_effect {
   animation: slide_all 2.0s infinite alternate;
@@ -332,9 +332,9 @@ a {
 .dark_mode_div {
   width: 100%;
   text-align: end;
-  margin-bottom: 1%;
-
+  padding-right: 2%;
 }
+
 
 .darkMode {
   cursor: pointer;
@@ -390,19 +390,20 @@ li {
 
 .right_side,
 .about_right_div {
-  padding-left: 10%;
-  padding-right: 3.5%;
+padding-left: 5%;
+padding-top: 2%;
   width: 45%;
 
-  padding-top: 3%;
+
 }
 
 .description_p {
 
-  font-size: 2rem;
+  font-size: 2em;
   font-family: "OpenSansCondensed-Bold", sans-serif;
   color: var(--icon-hover-bg);
   padding: 4px;
+  line-height: 2.5em;
 
 }
 
@@ -433,7 +434,7 @@ li {
 
 .dark_mode {
 
-  animation: fadeDarkMode 1.0s ease;
+  animation: fadeDarkMode 1.5s ease;
   background-color: #2d2d2d;
 
 }
@@ -478,6 +479,7 @@ li {
 
 .project_div {
   padding-top: 4%;
+  padding-bottom: 4%;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 15px;
@@ -487,7 +489,7 @@ li {
 
 .project_card_div {
   position: relative;
-  width: 50rem;
+  width: 30%;
   height: 500px;
   border-radius: 6px;
   overflow: hidden;
@@ -500,7 +502,7 @@ li {
 
 .project_info_div {
   height: 500px;
-  width: 50rem;
+  width: 100%;
   padding: 30px 20px;
   background-color: white;
   visibility: hidden;
@@ -509,7 +511,7 @@ li {
 
 
 .project_img_div {
-  width: 50rem;
+  width: 100%;
   height: 500px;
   position: absolute;
 
@@ -624,8 +626,18 @@ width: 50rem;
   width: 100%;
 
 
-  color: white;
+  /* color: white; */
 
+
+}
+
+.contact_social{
+  position: relative;
+  display: flex;
+  justify-content:end;
+  flex-direction: column;
+  gap: 30px;
+  color: black;
 }
 
 
