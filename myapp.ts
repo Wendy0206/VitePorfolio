@@ -1,5 +1,10 @@
 window.onload = function () {
-
+  const currentDate: Date = new Date();
+  const currentYear: number = currentDate.getFullYear();
+  const footer_year: Element | null = document.querySelector(".footer_text");
+  if (footer_year !== null) {
+      footer_year.innerHTML = `© ${currentYear} wendydonleypierre.dev`;
+  }
 
 const reveals: NodeListOf<Element> = document.querySelectorAll(".reveal");
 const dark_mode: HTMLElement | null = document.querySelector(".darkMode");

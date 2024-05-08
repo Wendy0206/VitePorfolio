@@ -644,12 +644,12 @@ margin-left: 60%;
 line-height: 50px;
 }
 .social_size{
-  font-size: 3.5em;
+  font-size: 2.0em;
   cursor: pointer;
 }
 
 .social_size:hover {
-transform: scale(1.1);
+transform: scale(1.2);
 }
 
 
@@ -661,7 +661,9 @@ transform: scale(1.1);
 }
 
 
-
+.contact_social{
+  width: 30px;
+}
 .right_div img {
   width: 100%;
   height: 100%;

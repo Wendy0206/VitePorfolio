@@ -1,6 +1,13 @@
 /* eslint-disable */
 
 window.onload = function () {
+
+let currentDate = new Date();
+let currentYear = currentDate.getFullYear();
+const footer_year = document.querySelector(".footer_text");
+footer_year.innerHTML='© '+currentYear+' wendydonleypierre.dev'
+
+
   var reveals = document.querySelectorAll(".reveal");
   const dark_mode = document.querySelector(".darkMode");
   const submit_button = document.querySelector(".submit-btn");
@@ -119,3 +126,4 @@ var current_mode=1;
     }
   });
 };
+
