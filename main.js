@@ -10,10 +10,8 @@ window.onload = function () {
   const resume = document.querySelector(".resume_button");
   resume.addEventListener('click',()=>{
     console.log("this function was called : ");
-
- 
-
   })
+
 
   for (let i = 0; i < image_hover.length; i++) {
  
@@ -59,16 +57,16 @@ let bool = regex.test(phone.value);
 
 
 var current_mode=1;
-  var home_left = document.querySelector(".left_side");
-  var project = document.querySelector(".project_div");
-  var footer_s = document.querySelector(".footer_style");
-  var submit = document.querySelector(".submit-btn");
-  var container = document.querySelector(".container_div");
-  var input_bg = document.querySelectorAll(".input_class");
-  var desc_p = document.querySelector(".title");
+
 
   dark_mode.addEventListener("click", () => {
-
+    var home_left = document.querySelector(".left_side");
+    var project = document.querySelector(".project_div");
+    var footer_s = document.querySelector(".footer_style");
+    var submit = document.querySelector(".submit-btn");
+    var container = document.querySelector(".container_div");
+    var input_bg = document.querySelectorAll(".input_class");
+    var desc_p = document.querySelector(".title");
 
     if (current_mode == 1) {
       home_left.style.backgroundColor = " #1a261d";
@@ -86,7 +84,10 @@ var current_mode=1;
       input_bg[3].style.backgroundColor = "rgba(33, 96, 47, 0.51)";
       document.documentElement.style.setProperty("--color", "white");
      current_mode=0;
-    } else {
+    }
+     else
+     
+     {
       home_left.style.backgroundColor = " rgba(33, 96, 47, 0.51)";
       project.style.backgroundColor = " rgba(33, 96, 47, 0.51)";
       footer_s.style.backgroundColor = " rgba(33, 96, 47, 0.51)";

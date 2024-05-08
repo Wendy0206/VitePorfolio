@@ -624,20 +624,32 @@ width: 50rem;
 
 .footer_style, .contact_social {
   width: 100%;
-
-
-  /* color: white; */
-
-
 }
 
+
+/* .form_contact_div{
+display: flex;
+justify-content: space-between;
+width: 100%;
+margin-left: 60%;
+} */
+
+
 .contact_social{
-  position: relative;
-  display: flex;
-  justify-content:end;
-  flex-direction: column;
-  gap: 30px;
+  position: absolute;
+  left: 2%;
   color: black;
+}
+.contact_social ul{
+line-height: 50px;
+}
+.social_size{
+  font-size: 3.5em;
+  cursor: pointer;
+}
+
+.social_size:hover {
+transform: scale(1.1);
 }
 
 
@@ -968,3 +980,6 @@ input[type=checkbox]:checked+label {
 
 
 
+.social_a, .social_a:visited, .social_a:hover, .social_a:active {
+  color: inherit;
+}
