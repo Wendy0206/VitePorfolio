@@ -73,6 +73,7 @@ var current_mode=1;
     var submit = document.querySelector(".submit-btn");
     var container = document.querySelector(".container_div");
     var input_bg = document.querySelectorAll(".input_class");
+  
     var desc_p = document.querySelector(".title");
 
     if (current_mode == 1) {
@@ -80,6 +81,7 @@ var current_mode=1;
       project.style.backgroundColor = " #1a261d";
       footer_s.style.backgroundColor = " #1a261d";
       submit.style.backgroundColor = " #1a261d";
+      footer_year.style.color = "white";
 
       desc_p.style.color = "white";
 
@@ -99,6 +101,7 @@ var current_mode=1;
       project.style.backgroundColor = " rgba(33, 96, 47, 0.51)";
       footer_s.style.backgroundColor = " rgba(33, 96, 47, 0.51)";
       submit.style.backgroundColor = " rgba(33, 96, 47, 0.51)";
+      footer_year.style.color = "black";
       container.classList.toggle("dark_mode");
       input_bg[0].style.backgroundColor = "#2d2d2d";
       input_bg[1].style.backgroundColor = "#2d2d2d";

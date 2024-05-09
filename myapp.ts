@@ -1,7 +1,8 @@
 window.onload = function () {
+  console.log('This is a test to see if our Typescript file is online.')
   const currentDate: Date = new Date();
   const currentYear: number = currentDate.getFullYear();
-  const footer_year: Element | null = document.querySelector(".footer_text");
+  const footer_year: HTMLElement | null = document.querySelector(".footer_text");
   if (footer_year !== null) {
       footer_year.innerHTML = `© ${currentYear} wendydonleypierre.dev`;
   }
@@ -42,11 +43,12 @@ for (let i = 0; i < image_hover.length; i++) {
     const desc_p = document.querySelector(".title") as HTMLElement | null;
   
     if (current_mode == 1) {
-      if (home_left && project && footer_s && submit && container && desc_p) {
+      if (home_left && project && footer_s && submit && container && desc_p && footer_year) {
         home_left.style.backgroundColor = "#1a261d";
         project.style.backgroundColor = "#1a261d";
         footer_s.style.backgroundColor = "#1a261d";
         submit.style.backgroundColor = "#1a261d";
+        footer_year.style.color = "white";
         desc_p.style.color = "white";
         container.classList.toggle("dark_mode");
         input_bg.forEach((element: HTMLElement) => {
@@ -56,12 +58,13 @@ for (let i = 0; i < image_hover.length; i++) {
         current_mode = 0;
       }
     } else {
-      if (home_left && project && footer_s && submit && container && desc_p) {
+      if (home_left && project && footer_s && submit && container && desc_p && footer_year) {
         home_left.style.backgroundColor = "rgba(33, 96, 47, 0.51)";
         project.style.backgroundColor = "rgba(33, 96, 47, 0.51)";
         footer_s.style.backgroundColor = "rgba(33, 96, 47, 0.51)";
         submit.style.backgroundColor = "rgba(33, 96, 47, 0.51)";
         desc_p.style.color = "#1a261d";
+        footer_year.style.color = "black";
         container.classList.toggle("dark_mode");
         input_bg.forEach((element: HTMLElement) => {
           element.style.backgroundColor = "#2d2d2d";
