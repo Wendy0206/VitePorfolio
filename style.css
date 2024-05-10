@@ -107,11 +107,7 @@ label[for="ham-menu"] {
 }
 
 
-/* #ham-menu:checked~div.full-page-green {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-} */
+
 
 #ham-menu:checked+label {
   background-color: transparent;
@@ -123,11 +119,6 @@ label[for="ham-menu"] {
   visibility: visible;
 }
 
-.link_section:active~div.ham-menu {
-  transform: translate(0px);
-  visibility: visible;
-
-}
 
 
 /* .full-page-green {
@@ -317,7 +308,7 @@ a {
   animation: slide_all 2.0s infinite alternate;
   font-size: 25px;
   font-weight: 700;
-  color: white;
+ 
 }
 
 @keyframes slide_all {
@@ -330,7 +321,6 @@ a {
 
   51% {
     color: black;
-
   }
 
   100% {
@@ -339,8 +329,6 @@ a {
   }
 
 }
-
-
 
 .dark_mode_div {
   width: 100%;
@@ -359,6 +347,7 @@ a {
   transform: rotate(-45deg);
 
 }
+
 
 .line {
   position: relative;
@@ -388,8 +377,7 @@ li {
   z-index: 3;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-
-  margin-top: 7%;
+  margin-top: 6%;
 
 }
 
@@ -439,8 +427,6 @@ width: 45%;
   border: 20px solid transparent;
   border-top: 30px solid var(--icon-hover-bg);
 }
-
-
 
 
 .dark_mode {
@@ -493,7 +479,6 @@ width: 45%;
   padding-bottom: 4%;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 15px;
 
 }
 
@@ -687,9 +672,6 @@ transform: scale(1.2);
 
 
 
-
-
-
 .slide_out {
   animation: slideMeOut 1.0s ease-in;
 
@@ -725,14 +707,14 @@ transform: scale(1.2);
 }
 
 
-.pop_in {
-  animation: popMe 1.0s ease-in;
+.fade_in {
+  animation: fadeMe 1.0s ease-in;
   animation-fill-mode: backwards;
 
 }
 
 
-@keyframes popMe {
+@keyframes fadeMe {
 
   0% {
     opacity: 0;
@@ -806,7 +788,7 @@ input:valid~label,
 textarea:valid~label {
   font-size: 0.75em;
   color: #999;
-  top: -5px;
+  top: 10px;
   -webkit-transition: all 0.225s ease;
   transition: all 0.225s ease;
 }

@@ -2,10 +2,22 @@
 
 window.onload = function () {
 
+  
 let currentDate = new Date();
 let currentYear = currentDate.getFullYear();
 const footer_year = document.querySelector(".footer_text");
 footer_year.innerHTML='© '+currentYear+' wendydonleypierre.dev'
+
+var menu_off = document.querySelectorAll(".link_section");
+var uncheck = document.querySelector("#ham-menu");
+
+
+for (let i = 0; i < menu_off.length; i++) {
+  menu_off[i].addEventListener('click', ()=>{
+    uncheck.checked=false;
+  })
+
+}
 
 
   var reveals = document.querySelectorAll(".reveal");
