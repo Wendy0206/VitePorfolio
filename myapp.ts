@@ -2,8 +2,16 @@
 
 window.onload = function () {
 
-
-
+  const menu_off = document.querySelectorAll<HTMLDivElement>(".link_section");
+  const uncheck = document.querySelector<HTMLInputElement>("#ham-menu");
+  
+  menu_off.forEach((link: HTMLDivElement) => {
+    link.addEventListener('click', () => {
+      if (uncheck) {
+        uncheck.checked = false;
+      }
+    });
+  });
   
   const currentDate: Date = new Date();
   const currentYear: number = currentDate.getFullYear();
