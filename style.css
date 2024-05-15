@@ -587,13 +587,32 @@ width: 50rem;
 
 
 .contact_div {
-
   min-height: 60vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
 
+
+.big_contact{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.contact_right_div{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left:30%;
+}
+
+.contact_left_div{
+  width: 10%;
+  padding-top: 10%;
 }
 
 
@@ -611,14 +630,6 @@ margin-left: 60%;
 } */
 
 
-.contact_social{
-  position: absolute;
-  left: 2%;
-  color: black;
-}
-.contact_social ul{
-line-height: 50px;
-}
 .social_size{
   font-size: 2.0em;
   cursor: pointer;
@@ -637,9 +648,7 @@ transform: scale(1.2);
 }
 
 
-.contact_social{
-  width: 30px;
-}
+
 .right_div img {
   width: 100%;
   height: 100%;
@@ -686,11 +695,9 @@ transform: scale(1.2);
 
 }
 
-
 .fade_in {
   animation: fadeMe 1.0s ease-in;
   animation-fill-mode: backwards;
-
 }
 
 
@@ -753,15 +760,6 @@ transform: scale(1.2);
 
 
 
-.row h1 {
-  font-family: 'Poppins', sans-serif, 'arial';
-  font-weight: 600;
-  font-size: 72px;
-  color: white;
-  text-align: center;
-}
-
-
 input:focus~label,
 textarea:focus~label,
 input:valid~label,
@@ -775,11 +773,13 @@ textarea:valid~label {
 
 .styled-input {
   float: left;
-  width: 293px;
+  width: 50%;
   margin: 1rem 0;
   position: relative;
   border-radius: 4px;
 }
+
+
 
 
 .styled-input label {
@@ -794,10 +794,7 @@ textarea:valid~label {
   font-size: 20px;
 }
 
-.styled-input.wide {
-  width: 650px;
-  max-width: 100%;
-}
+
 
 .input_class {
   padding: 30px;
@@ -827,13 +824,10 @@ textarea {
 }
 
 .input-container {
-  width: 650px;
-  max-width: 100%;
   margin: 20px auto 25px auto;
 }
 
 .submit-btn {
-  float: right;
   padding: 7px 20px;
   border-radius: 60px;
   display: inline-block;
@@ -907,7 +901,9 @@ input[type=checkbox]:checked+label {
 
 
 
-
+.footer_text{
+  color:white;
+}
 
 
 /* CSS */
@@ -951,9 +947,81 @@ input[type=checkbox]:checked+label {
 }
 
 
-
-
-
 .social_a, .social_a:visited, .social_a:hover, .social_a:active {
   color: inherit;
 }
+
+.w_div{
+  display: flex;
+  justify-content: end;
+}
+
+@media screen and (min-width: 400px ) and (max-width: 576px) {
+  .home_div,
+  .about_div,
+  .project_div {
+    position: relative;
+    min-height: 75vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  
+  
+  }
+
+  .header_style {
+    font-size: 3em;
+    white-space: nowrap;
+    letter-spacing: 0.0em;
+    color: rgb(97, 97, 97);
+  }
+  
+
+.w_div{
+  display: none;
+}
+  
+.right_side{
+  display: none;
+}
+
+.about_left_div,.left_side{
+width: 100%;
+height: 100%;
+min-height: 75vh;
+padding-top: 95px;
+
+  }
+
+.contact_div{
+  padding: 15px;
+}
+
+  .about_right_div{
+    display: none;
+  }
+  .project_card_div {
+    position: relative;
+    width: 90%;
+    height: auto;
+   margin-bottom: 20px;
+  
+  }
+  .line_hi {
+  
+    margin-bottom: 16px;
+}
+
+.styled-input{
+  width: 100%;
+}
+.contact_right_div{
+  margin:auto;
+}
+.contact_left_div{
+  margin-right:5px;
+}
+
+ }
