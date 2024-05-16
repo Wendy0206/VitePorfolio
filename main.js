@@ -36,6 +36,8 @@ for (let i = 0; i < menu_off.length; i++) {
  
     image_hover[i].addEventListener("mouseover", () => {
       show_info[i].classList.toggle("show_project_info");
+     
+
     });
   }
 
@@ -56,20 +58,20 @@ for (let i = 0; i < menu_off.length; i++) {
     let regex = /\D/;
 let bool = regex.test(phone.value);
     
-    // if (!email.value.includes("@")) {
-    //   // email.classList.add()
-    //   console.log("this is not a valid email");
-    //   return "stops here";
-    // }
+    if (!email.value.includes("@")) {
+      // email.classList.add()
+      console.log("this is not a valid email");
+      return "stops here";
+    }
     if (bool) {
       console.log('it does contain letter');
     }
 
-   // (name.value.length<2) {
-    //   // email.classList.add()
-    //   console.log("this is not a valid email");
-    //   return "stops here";
-    // }
+   (name.value.length<2) {
+      // email.classList.add()
+      console.log("this is not a valid email");
+      return "stops here";
+    }
 
 
   });

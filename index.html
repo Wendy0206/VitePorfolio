@@ -45,24 +45,22 @@
       <div class="home_div" id="home">
         <a id="home_section"></a>
         <div class="left_side">
-          <div class=" w_div"> <span class=" text-lg w_effect">W</span></div>
+      
           <h3 class=" line_hi">Hi,</h3>
-
-          <div class="d-flex ">
-
+          <div class="">
             <h1 class="header_style slide_in">&lt;</h1>
-
-            <h1 class="header_style"> Wendy Donl</h1>
-            <h1 class="header_style text-light">ey Pierre</h1>
+            <h1 class="header_style"> Wendy </h1>
+            <h1 class="header_style">Donley</h1>
+            <h1 class="header_style text-light">Pierre</h1>
             <h1 class="header_style slide_out">/></h1>
 
 
 
           </div>
           <p class="description title" id="size_des">
-            Software Engineer | Passionate about building innovative solutions |
+            <!-- Software Engineer | Passionate about building innovative solutions |
             Full-stack developer | Python & JavaScript enthusiast | Tech geek exploring the digital world | Lifelong
-            learner.
+            learner. -->
           </p>
         </div>
 
@@ -84,7 +82,7 @@
             <div class=" fade_in  delay-11"><img src="./assets/image_part_011.png" class="image_part" /></div>
             <div class=" fade_in  delay-12"><img src="./assets/image_part_012.png" class="image_part" /></div>
           </div>
-          <div class="drop line"></div>
+        
         </div>
 
 
@@ -94,8 +92,8 @@
         <a id="about_section"></a>
         <div class="about_left_div">
 
-          <h1 class="line_hi mb-4">Who am I ?</h1>
-          <p class="description_p">I'm a software developer located in Hollywood,FL. <strong>4Geeks Academy</strong> alumni with a bachelors in computer
+          <h1 class="mb-4 line_hi">Who am I ?</h1>
+          <p class="descr_p">I'm a software developer located in Hollywood,FL. <strong>4Geeks Academy</strong> alumni with a bachelors in computer
              science and a minor in business management. passionate about my work,
             eagerly seeking every possible opportunity to enhance and deliver operational,
             intuitive solutions. With 2 years of experience in JavaScript, MySQL, and SQL Server,
@@ -217,55 +215,55 @@
 
       <div class="contact_div" id="contact">
         <a id="contact_section"></a>
+<div class="d-flex justify-content-center w-100 "><h1 class="contact_text">Lets chat</h1></div>
 
-<div class="big_contact mb-4">
-        <div class="contact_left_div">
-
-          <ul>
-
-            <li class="mb-4"><a onclick='window.open("https://www.linkedin.com/in/wendy-donley-pierre-5b5261197");return false;'
-                target="_blank" class="social_a"><i class="fa-brands fa-linkedin-in social_size"></i></i></a></li>
-
-            <li class="mb-4"><a onclick='window.open("https://github.com/Wendy0206");return false;' target="_blank"
-                class="social_a"><i class="fa-brands fa-github social_size"></i></a></li>
-
-            <li><a onclick='window.open("https://stackoverflow.com/users/10836917/dydy");return false;'
-                target="_blank" class="social_a"><i class="fa-brands fa-stack-overflow social_size "></i></a></li>
-
-          </ul>
-
-        </div>
+     
         
-        <div class="contact_right_div">
+        <div class="big_contact">
          
-              <div class="styled-input ">
-                <input type="text" required class="input_class name_in" />
-                <label>Name</label>
-              </div>
-           
-       
+             
               <div class="styled-input style">
                 <input type="text" required class="reveal fade-left input_class email_in" />
+                <div class="invalid-feedback">
+                  Please provide a valid email
+                </div>
                 <label>Email</label>
-              </div>
-           
+              </div>     
           
               <div class="styled-input">
-                <input type="text" required class="reveal fade-right input_class phone_in" />
+                <input type="text" required class="reveal fade-right input_class phone_in " />
+                <div class="invalid-feedback">
+                  Please provide a valid phone number
+                </div>
                 <label>Phone Number</label>
               </div>
-      
-         
+          
               <div class="styled-input">
                 <textarea required class="input_class comment_in"></textarea>
                 <label>Message</label>
             </div>
-            <div class="form_button"> <button class="btn-lrg submit-btn">Send Message</button></div>
-          
+
+            <div class="form_button d-flex justify-content-center"> <button class="btn-lrg submit-btn">Send Message</button></div>
+       
+            <!-- big contact ends below -->
           </div>
-            <!-- input form container ends below -->
+           
     
-      </div>
+     <div class="contact_social ">
+            <ul class="d-flex">
+
+              <li><a onclick='window.open("https://www.linkedin.com/in/wendy-donley-pierre-5b5261197");return false;'
+                  target="_blank" class="social_a"><i class="fa-brands fa-linkedin-in social_size"></i></a></li>
+
+              <li><a onclick='window.open("https://github.com/Wendy0206");return false;'
+                 target="_blank" class="social_a"><i class="fa-brands fa-github social_size"></i></a></li>
+
+                  
+              <li><a onclick='window.open("https://stackoverflow.com/users/10836917/dydy");return false;'
+                  target="_blank" class="social_a"><i class="fa-brands fa-stack-overflow social_size "></i></a></li>
+
+            </ul>
+          </div> 
            
       </div>
       <footer class="p-4 d-flex justify-content-center footer_style ">
@@ -273,8 +271,7 @@
       </footer>
     </section>
   </div>
-
-   <!-- <script src="./main.js"></script>  -->
+ <!-- <script src="./main.js"></script>   -->
   <script src="./myapp.ts"></script>
 </body>
 
