@@ -17,6 +17,9 @@ window.onload = function () {
       });
     }
   }
+ 
+
+
 
   for (let i = 0; i < image_hover.length; i++) {
     if (show_info[i] instanceof HTMLElement) {
@@ -126,10 +129,21 @@ window.addEventListener('scroll', () => {
   });
 });
 
+const phone = document.querySelector(".phone_in")  as HTMLInputElement | null;
+const email = document.querySelector(".email_in")  as HTMLInputElement | null;
+
+// phone?.addEventListener("change",()=>{
+//   console.log("This function was called");
+//   phone.classList.remove('is-invalid');
+// })
+// email?.addEventListener("change",()=>{
+//   console.log("This function was called");
+//   email.classList.remove('is-invalid');
+// })
+
 if(submit){
   submit.addEventListener("click", () => {
-    const phone = document.querySelector(".phone_in")  as HTMLInputElement | null;
-    const email = document.querySelector(".email_in")  as HTMLInputElement | null;
+ 
     const comment = document.querySelector(".comment_in")  as HTMLInputElement | null;
   
   if(phone && email && comment ){
@@ -140,13 +154,12 @@ if(submit){
     let bool: boolean = regex.test(phone.value);
   let invalid_index: number;
     if (!email_val.includes("@")) {
-        console.log("This is not a valid email");
         email.classList.add('is-invalid');
-     // If you want to stop further execution, use `return;`
+   
     }
    
     if (bool || phone.value.length<7) {
-      console.log("This is not a valid phone number");
+   
       phone.classList.add('is-invalid');
    
     }
