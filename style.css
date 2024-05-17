@@ -338,7 +338,9 @@ padding-bottom: 3%;
   font-size: 3.5em;
   cursor: pointer;
   margin-right:10px ;
+  transition: all 1.0s ease;
 }
+
 
 .descr_p {
   font-size: 2em;
