@@ -10,26 +10,37 @@ window.onload = function () {
 
 
 
-  for (let i = 0; i < image_hover.length; i++) {
-    if (image_hover[i] instanceof HTMLElement && show_info[i] instanceof HTMLElement) {
-      image_hover[i].addEventListener("mouseenter", ()=> {  
-        console.log('We get in');
-        show_info[i].classList.add("show_project_info");
-        
-      });
-    }
-  }
+  image_hover[0].addEventListener("mouseover", ()=> {  
+    console.log('I detect this piece of code works')
+          show_info[0].classList.add("show_project_info");
+          show_info[1].classList.remove("show_project_info");
+          show_info[2].classList.remove("show_project_info"); 
+        });
+    
+    image_hover[1].addEventListener("mouseover", ()=> {  
+      show_info[1].classList.add("show_project_info");
+      show_info[0].classList.remove("show_project_info");
+      show_info[2].classList.remove("show_project_info");  
+    });
+
+    image_hover[2].addEventListener("mouseover", ()=> {  
+      show_info[2].classList.add("show_project_info");
+      show_info[0].classList.remove("show_project_info");
+      show_info[1].classList.remove("show_project_info");
+    });
 
 
   for (let i = 0; i < image_hover.length; i++) {
     if (image_hover[i] instanceof HTMLElement && show_info[i] instanceof HTMLElement) {
-      image_hover[i].addEventListener("mouseleave", ()=> { 
-        console.log('We get out'); 
+     show_info[i].addEventListener("mouseleave", ()=> { 
         show_info[i].classList.remove("show_project_info");
         
       });
     }
   }
+
+
+
 
 
 
@@ -48,9 +59,6 @@ window.onload = function () {
   if (footer_year !== null) {
     footer_year.innerHTML = `© ${currentYear} wendydonleypierre.dev`;
   }
-
-
-
 
 
   let current_mode: number = 1;
@@ -117,25 +125,25 @@ window.onload = function () {
   }
 
 
+
+
 window.addEventListener('scroll', () => {
-  const windowBottom = window.scrollY + window.innerHeight;
-  document.querySelectorAll<HTMLElement>('.reveal').forEach(element => {
-    const sectionTop = element.getBoundingClientRect().top + window.scrollY;
-    if (windowBottom > sectionTop) {
-     
-      element.classList.add('active');
-    }
-  });
+  if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
+   const reveals= document.querySelectorAll<HTMLElement>('.reveal') as NodeListOf<HTMLElement>;
+   for (let i = 0; i < reveals.length; i++) {
+    reveals[i].classList.add('active');
+   }
+
+  }
 });
 
-
-const phone = document.querySelector(".phone_in")  as HTMLInputElement | null;
-const email = document.querySelector(".email_in")  as HTMLInputElement | null;
 
 if(submit){
   submit.addEventListener("click", () => {
   const comment = document.querySelector(".comment_in")  as HTMLInputElement | null;
-  
+  const phone = document.querySelector(".phone_in")  as HTMLInputElement | null;
+const email = document.querySelector(".email_in")  as HTMLInputElement | null;
+
   if(phone && email && comment ){
     let email_val: string = email.value;
   
@@ -154,6 +162,36 @@ if(submit){
     
   });
 }
+
+
+
+
+function throttle(fn: Function, wait: number) {
+  let time = Date.now();
+  return function (...args: any[]) {
+    if ((time + wait - Date.now()) < 0) {
+      fn(...args);
+      time = Date.now();
+    }
+  };
+}
+
+const handleScroll = () => {
+  const windowBottom = window.scrollY + window.innerHeight;
+  document.querySelectorAll<HTMLElement>('.reveal').forEach(element => {
+    const sectionTop = element.getBoundingClientRect().top + window.scrollY;
+    if (windowBottom > sectionTop) {
+      element.classList.add('active');
+    }
+  });
+};
+
+// window.addEventListener('scroll', throttle(handleScroll, 200));
+
+
+
+
+
 
 
 

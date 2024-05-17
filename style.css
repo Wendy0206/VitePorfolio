@@ -93,7 +93,7 @@ label[for="ham-menu"] {
   white-space: nowrap;
   letter-spacing: 0.1em;
   cursor: pointer;
-  color: rgb(97, 97, 97);
+  color: white;
 }
 
 .link_section:hover {
@@ -395,8 +395,8 @@ align-items: center;
   width: 100%;
   height: 500px;
   position: absolute;
-
 }
+
 
 .project_info_div {
   height: 500px;
@@ -409,7 +409,7 @@ align-items: center;
 
 
 .show_project_info {
-  animation: diagonalEntry 0.5s ease-in;
+  animation: diagonalEntry 0.8s ease-in;
   animation-fill-mode: forwards;
   padding-top: 15px;
   visibility: visible;
@@ -652,6 +652,7 @@ textarea:valid~label {
 
 .contact_div > ul{
 width: fit-content;
+margin-bottom: 0rem;
 }
 
 
@@ -752,27 +753,27 @@ input[type=checkbox]:checked+label {
 
 .reveal {
   position: relative;
-  opacity: 1;
+  opacity: 0;
+  animation-fill-mode: backwards;
 }
 
-.reveal.active {
+.reveal.active{
   opacity: 1;
-
 }
 
 .active.fade-left {
-  animation: fade-left 1.0s ease-in;
+  animation: fade-left 0.8s ease-in;
  
 }
 
 .active.fade-right {
-  animation: fade-right 1.0s ease-in;
+  animation: fade-right 0.8s ease-in;
 
 }
 
 @keyframes fade-left {
   0% {
-    transform: skew(45deg) translateX(-180px);
+    transform: skew(45deg) translateX(-30%);
     opacity: 0;
   }
 
@@ -784,7 +785,7 @@ input[type=checkbox]:checked+label {
 
 @keyframes fade-right {
   0% {
-    transform: skew(45deg) translateX(180px);
+    transform: skew(45deg) translateX(+30%);
     opacity: 0;
   }
 
@@ -851,6 +852,23 @@ input[type=checkbox]:checked+label {
   color: inherit;
 }
 
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 
 
 @media screen and (min-width: 320px) and (max-width: 786px) {
@@ -883,23 +901,6 @@ input[type=checkbox]:checked+label {
   }
 
 
-  @keyframes shake {
-    10%, 90% {
-      transform: translate3d(-1px, 0, 0);
-    }
-    
-    20%, 80% {
-      transform: translate3d(2px, 0, 0);
-    }
-  
-    30%, 50%, 70% {
-      transform: translate3d(-4px, 0, 0);
-    }
-  
-    40%, 60% {
-      transform: translate3d(4px, 0, 0);
-    }
-  }
 
 
   .right_side,
@@ -928,7 +929,7 @@ input[type=checkbox]:checked+label {
 
 
 .big_contact {
-width: 60%;
+width: 95%;
 }
 .contact_social{
   margin: 15px 0px 5px 0px;
