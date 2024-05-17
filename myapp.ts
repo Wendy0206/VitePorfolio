@@ -12,24 +12,24 @@ window.onload = function () {
 
   for (let i = 0; i < image_hover.length; i++) {
     if (image_hover[i] instanceof HTMLElement && show_info[i] instanceof HTMLElement) {
-      image_hover[i].addEventListener("mouseover", () => {    
-        show_info[i].classList.toggle("show_project_info");
+      image_hover[i].addEventListener("mouseenter", ()=> {  
+        console.log('We get in');
+        show_info[i].classList.add("show_project_info");
+        
       });
     }
   }
- 
-
 
 
   for (let i = 0; i < image_hover.length; i++) {
-    if (show_info[i] instanceof HTMLElement) {
-      show_info[i].addEventListener("mouseout", () => {
-        show_info[i].classList.toggle("show_project_info");
+    if (image_hover[i] instanceof HTMLElement && show_info[i] instanceof HTMLElement) {
+      image_hover[i].addEventListener("mouseleave", ()=> { 
+        console.log('We get out'); 
+        show_info[i].classList.remove("show_project_info");
+        
       });
     }
   }
-
-
 
 
 
@@ -117,7 +117,6 @@ window.onload = function () {
   }
 
 
-
 window.addEventListener('scroll', () => {
   const windowBottom = window.scrollY + window.innerHeight;
   document.querySelectorAll<HTMLElement>('.reveal').forEach(element => {
@@ -129,25 +128,15 @@ window.addEventListener('scroll', () => {
   });
 });
 
+
 const phone = document.querySelector(".phone_in")  as HTMLInputElement | null;
 const email = document.querySelector(".email_in")  as HTMLInputElement | null;
 
-// phone?.addEventListener("change",()=>{
-//   console.log("This function was called");
-//   phone.classList.remove('is-invalid');
-// })
-// email?.addEventListener("change",()=>{
-//   console.log("This function was called");
-//   email.classList.remove('is-invalid');
-// })
-
 if(submit){
   submit.addEventListener("click", () => {
- 
-    const comment = document.querySelector(".comment_in")  as HTMLInputElement | null;
+  const comment = document.querySelector(".comment_in")  as HTMLInputElement | null;
   
   if(phone && email && comment ){
-
     let email_val: string = email.value;
   
     let regex: RegExp = /\D/;
@@ -155,16 +144,12 @@ if(submit){
   let invalid_index: number;
     if (!email_val.includes("@")) {
         email.classList.add('is-invalid');
-   
     }
    
     if (bool || phone.value.length<7) {
-   
       phone.classList.add('is-invalid');
-   
     }
-   
-
+  
   }
     
   });

@@ -1,83 +1,67 @@
-/* eslint-disable */
+
 
 window.onload = function () {
 
-  
-let currentDate = new Date();
-let currentYear = currentDate.getFullYear();
-const footer_year = document.querySelector(".footer_text");
-footer_year.innerHTML='© '+currentYear+' wendydonleypierre.dev'
-
-var menu_off = document.querySelectorAll(".link_section");
-var uncheck = document.querySelector("#ham-menu");
+  const image_hover = document.querySelectorAll(".project_img_div");
+  const show_info = document.querySelectorAll(".project_info_div");
+  let currentYear = new Date().getFullYear();
+  const footer_year = document.querySelector(".footer_text");
+  footer_year.innerHTML = '© ' + currentYear + ' wendydonleypierre.dev'
 
 
-for (let i = 0; i < menu_off.length; i++) {
-  menu_off[i].addEventListener('click', ()=>{
-    uncheck.checked=false;
-  })
+  for (let i = 0; i < image_hover.length; i++) {
+   
+    image_hover[i].addEventListener("mouseenter", () => {
+      console.log('We get in');
+       show_info[i].classList.toggle("show_project_info");
 
-}
+    });
+  }
+
+  for (let i = 0; i < image_hover.length; i++) {
+   
+    image_hover[i].addEventListener("mouseleave", () => {
+      console.log('We get out');
+       show_info[i].classList.toggle("show_project_info");
+
+    });
+  }
+
+
+
+
+
+
+  var menu_off = document.querySelectorAll(".link_section");
+  for (let i = 0; i < menu_off.length; i++) {
+    menu_off[i].addEventListener('click', () => {
+      var uncheck = document.querySelector("#ham-menu");
+      uncheck.checked = false;
+    })
+
+  }
 
 
   var reveals = document.querySelectorAll(".reveal");
   const dark_mode = document.querySelector(".darkMode");
   const submit_button = document.querySelector(".submit-btn");
-  const image_hover = document.querySelectorAll(".project_img_div");
-  const show_info = document.querySelectorAll(".project_info_div");
+
 
   const resume = document.querySelector(".resume_button");
-  resume.addEventListener('click',()=>{
-    console.log("this function was called : ");
+  resume.addEventListener('click', () => {
+
   })
 
 
-  for (let i = 0; i < image_hover.length; i++) {
- 
-    image_hover[i].addEventListener("mouseover", () => {
-      show_info[i].classList.toggle("show_project_info");
-     
-
-    });
-  }
-
-  for (let i = 0; i < image_hover.length; i++) {
-  
-    show_info[i].addEventListener("mouseleave", () => {
-      show_info[i].classList.toggle("show_project_info");
-    });
-  }
-
-  submit_button.addEventListener("click", () => {
-    const name = document.querySelector(".name_in");
-    const phone = document.querySelector(".phone_in");
-    const email = document.querySelector(".email_in");
-    const comment = document.querySelector(".comment_in");
-    let email_val = email.value;
-  
-    let regex = /\D/;
-let bool = regex.test(phone.value);
-    
-    if (!email.value.includes("@")) {
-      // email.classList.add()
-      console.log("this is not a valid email");
-      return "stops here";
-    }
-    if (bool) {
-      console.log('it does contain letter');
-    }
-
-   (name.value.length<2) {
-      // email.classList.add()
-      console.log("this is not a valid email");
-      return "stops here";
-    }
 
 
-  });
 
 
-var current_mode=1;
+
+
+
+
+  var current_mode = 1;
 
 
   dark_mode.addEventListener("click", () => {
@@ -87,7 +71,7 @@ var current_mode=1;
     var submit = document.querySelector(".submit-btn");
     var container = document.querySelector(".container_div");
     var input_bg = document.querySelectorAll(".input_class");
-  
+
     var desc_p = document.querySelector(".title");
 
     if (current_mode == 1) {
@@ -106,11 +90,9 @@ var current_mode=1;
       input_bg[2].style.backgroundColor = "rgba(33, 96, 47, 0.51)";
       input_bg[3].style.backgroundColor = "rgba(33, 96, 47, 0.51)";
       document.documentElement.style.setProperty("--color", "white");
-     current_mode=0;
+      current_mode = 0;
     }
-     else
-     
-     {
+    else {
       home_left.style.backgroundColor = " rgba(33, 96, 47, 0.51)";
       project.style.backgroundColor = " rgba(33, 96, 47, 0.51)";
       footer_s.style.backgroundColor = " rgba(33, 96, 47, 0.51)";
@@ -122,10 +104,9 @@ var current_mode=1;
       input_bg[2].style.backgroundColor = "#2d2d2d";
       input_bg[3].style.backgroundColor = "#2d2d2d";
       document.documentElement.style.setProperty("--color", "#373B44");
-      
       desc_p.style.color = " #1a261d";
 
-        current_mode=1;
+      current_mode = 1;
     }
   });
 
