@@ -63,28 +63,28 @@ window.onload = function () {
 
   let current_mode: number = 1;
   if (dark_mode) {
+   
     dark_mode.addEventListener("click", () => {
-      
+      console.log('cikwnkwnk')
       const home_left = document.querySelector(".left_side") as HTMLElement | null;
       const project = document.querySelector(".project_div") as HTMLElement | null;
       const footer_s = document.querySelector(".footer_style") as HTMLElement | null;
       const container = document.querySelector(".container_div") as HTMLElement | null;
+      const awesome = document.querySelectorAll(".about_img i")  as NodeListOf<HTMLElement>;
       const input_bg = document.querySelectorAll(".input_class") as NodeListOf<HTMLElement>;
-      const desc_p = document.querySelector(".title") as HTMLElement | null;
       const chat = document.querySelector(".contact_text") as HTMLElement | null;
       const social = document.querySelectorAll(".social_a") as NodeListOf<HTMLElement>;
       const hi_line = document.querySelectorAll(".line_hi") as NodeListOf<HTMLElement>;
   
   
-        if (home_left && project && footer_s && submit && container && desc_p && footer_year && hi_line && chat && social) {
+        if (home_left && project && footer_s && submit && container && footer_year && hi_line && chat && social) {
           if (current_mode == 1) {
-
           home_left.style.backgroundColor = "#1a261d";
           project.style.backgroundColor = "#1a261d";
           footer_s.style.backgroundColor = "#1a261d";
           submit.style.backgroundColor = "#1a261d";
           footer_year.style.color = "white";
-          desc_p.style.color = "white";
+       
           chat.style.color = "white";
           social[0].style.color = "white";
           social[1].style.color = "white";
@@ -105,7 +105,7 @@ window.onload = function () {
           project.style.backgroundColor = "rgba(33, 96, 47, 0.51)";
           footer_s.style.backgroundColor = "rgba(33, 96, 47, 0.51)";
           submit.style.backgroundColor = "rgba(33, 96, 47, 0.51)";
-          desc_p.style.color = "#1a261d";
+          
           chat.style.color = "#1a261d";
           footer_year.style.color = "black";
           container.classList.toggle("dark_mode");
