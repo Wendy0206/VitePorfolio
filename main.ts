@@ -95,6 +95,10 @@ window.onload = function () {
           input_bg.forEach((element: HTMLElement) => {
             element.style.backgroundColor = "rgba(33, 96, 47, 0.51)";
           });
+
+          awesome.forEach((element: HTMLElement) => {
+            element.style.color = "white";
+          });
           document.documentElement.style.setProperty("--color", "white");
           current_mode = 0;
         }
@@ -109,6 +113,9 @@ window.onload = function () {
           chat.style.color = "#1a261d";
           footer_year.style.color = "black";
           container.classList.toggle("dark_mode");
+          awesome.forEach((element: HTMLElement) => {
+            element.style.color = "black";
+          });
           hi_line[0].style.color = "black";
           hi_line[1].style.color = "black";
           social[0].style.color = "black";
