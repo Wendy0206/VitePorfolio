@@ -8,8 +8,6 @@ window.onload = function () {
   const image_hover: NodeListOf<Element> = document.querySelectorAll(".project_img_div");
   const show_info: NodeListOf<Element> = document.querySelectorAll(".project_info_div");
 
-
-
   image_hover[0].addEventListener("mouseover", ()=> {  
     console.log('I detect this piece of code works')
           show_info[0].classList.add("show_project_info");
@@ -38,10 +36,6 @@ window.onload = function () {
       });
     }
   }
-
-
-
-
 
 
 
@@ -156,7 +150,6 @@ const email = document.querySelector(".email_in")  as HTMLInputElement | null;
   
     let regex: RegExp = /\D/;
     let bool: boolean = regex.test(phone.value);
-  let invalid_index: number;
     if (!email_val.includes("@")) {
         email.classList.add('is-invalid');
     }
@@ -169,34 +162,6 @@ const email = document.querySelector(".email_in")  as HTMLInputElement | null;
     
   });
 }
-
-
-
-
-function throttle(fn: Function, wait: number) {
-  let time = Date.now();
-  return function (...args: any[]) {
-    if ((time + wait - Date.now()) < 0) {
-      fn(...args);
-      time = Date.now();
-    }
-  };
-}
-
-const handleScroll = () => {
-  const windowBottom = window.scrollY + window.innerHeight;
-  document.querySelectorAll<HTMLElement>('.reveal').forEach(element => {
-    const sectionTop = element.getBoundingClientRect().top + window.scrollY;
-    if (windowBottom > sectionTop) {
-      element.classList.add('active');
-    }
-  });
-};
-
-// window.addEventListener('scroll', throttle(handleScroll, 200));
-
-
-
 
 
 
